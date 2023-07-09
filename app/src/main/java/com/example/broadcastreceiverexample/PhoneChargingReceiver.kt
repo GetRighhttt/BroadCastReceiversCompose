@@ -7,11 +7,10 @@ import android.provider.Settings
 import android.util.Log
 
 // Dynamic Broadcast Receiver class
-class PhoneChargingReceiver: BroadcastReceiver() {
+class PhoneChargingReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context?, intent: Intent?) {
-        if(intent?.action == Intent.ACTION_POWER_CONNECTED) {
-            val isConnected = Intent.ACTION_POWER_CONNECTED
-            Log.d("PhoneChargingReceiver", "Phone charging? : $isConnected")
+        val isConnected = intent?.action == Intent.ACTION_POWER_CONNECTED.apply {
+            Log.d("PhoneChargingReceiver", "Phone charging? : $this")
         }
     }
 }
