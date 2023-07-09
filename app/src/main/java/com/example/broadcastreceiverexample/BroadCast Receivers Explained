@@ -1,0 +1,11 @@
+Broadcast and BroadCast Receivers
+
+Google Developers state that android apps can send or receive BROADCAST messages from the Android
+system and other Android apps similar to a pub-sub design pattern. These broadcast are sent when
+an event occurs, like a system boots up, airplane mode is turned off, etc. Apps can also send custom
+broadcast that act in the same way. An example of this would be when something has finished
+downloading, notifications, etc.
+
+BROADCAST RECEIVERS are when apps register to receive these said broadcast by way of either
+declaring those receivers in the manifest file of the application, or registering receivers by way
+of context.
