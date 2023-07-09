@@ -8,4 +8,5 @@ downloading, notifications, etc.
 
 BROADCAST RECEIVERS are when apps register to receive these said broadcast by way of either
 declaring those receivers in the manifest file of the application, or registering receivers by way
-of context.
+of context. These receivers get triggered when said broadcast is received, and we can use this
+event to trigger other events to happen, or do some action in our application as a result.
