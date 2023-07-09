@@ -10,10 +10,7 @@ import android.util.Log
 class PhoneChargingReceiver: BroadcastReceiver() {
     override fun onReceive(context: Context?, intent: Intent?) {
         if(intent?.action == Intent.ACTION_POWER_CONNECTED) {
-            val isConnected = Settings.Global.getInt(
-                context?.contentResolver,
-                Settings.Global.STAY_ON_WHILE_PLUGGED_IN
-            ) != 0
+            val isConnected = Intent.ACTION_POWER_CONNECTED
             Log.d("PhoneChargingReceiver", "Phone charging? : $isConnected")
         }
     }
